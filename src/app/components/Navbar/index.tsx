@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
-            Terry Mitchell
+            Mitchell
           </h2>
           <div className="flex items-center space-x-20">
             <Link href="#home" className="text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Home</Link>

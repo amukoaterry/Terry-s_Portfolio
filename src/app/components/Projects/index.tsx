@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const projects: Project[] = [
     { id: '1', title:'Universal Clock', description: 'This is a universal clock project that updates automatically using real-time data,making it easy for users to keep track of different time zones.I used *World Time API* to Fetch and display the current time for a selected city ', image: '/images/BackGround.png', demo:<a href='https://uni-clock.vercel.app/'>demo</a>},
-    { id: '2', title: 'Kipepeo Fashion Website', description: 'Kipepeo is a fashion platform designed to streamline seamless online shopping.The platform features a sleek website to showcase collections and engage with fashion enthusiasts.', image: '/images/KIPEPEO DESIGN .png', demo:<a href='https://www.behance.net/gallery/209750759/Kipepeo-Haute-Couture-Fashion-Website'>demo</a> },
+    { id: '2', title: 'Kipepeo Fashion Website', description: 'Kipepeo is a fashion platform designed to streamline seamless online shopping.The platform features a sleek website to showcase collections and engage with fashion enthusiasts.', image: '/images/KIPEPEO DESIGN  .png', demo:<a href='https://www.behance.net/gallery/209750759/Kipepeo-Haute-Couture-Fashion-Website'>demo</a> },
     { id: '3', title: 'En-Wallet', description: 'A Kotlin based android project meant to demostrate income and expense tracker designed for modern early-career professionals', image: '/images/en_wallet.jpeg', demo:<a href='https://appetize.io/app/b_z4yrj2nr32mk563tvzwsodtgma'>demo</a> },
   ]
 
