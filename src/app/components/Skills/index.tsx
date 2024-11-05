@@ -14,17 +14,27 @@ const Skills: React.FC = () => {
     { name: 'Next.js', level: 79, category: 'Frontend Web Development' },
     { name: 'HTML/CSS', level: 95, category: 'Frontend Web Development' },
 
+
+
     { name: 'Kotlin', level: 50, category: 'Android Development' },
+
+
 
     { name: 'Adobe Creative Cloud', level: 80, category: 'UI/UX Design' },
     { name: 'Figma', level: 85, category: 'UI/UX Design' },
+    { name: 'InVision', level: 85, category: 'UI/UX Design' },
+
+
 
 
     { name: 'Python', level: 70, category: 'Backend' },
     { name: 'Django', level: 70, category: 'Backend' },
 
-    { name: 'Jira', level: 85, category: 'Product Strategy' },
-    { name: 'Tableau', level: 85, category: 'Product Strategy' },
+
+    { name: 'Jira', level: 85, category: 'Product Management' },
+    { name: 'Tableau', level: 85, category: 'Product Management' },
+    { name: 'Coda.io', level: 85, category: 'Product Management' },
+
 
     { name: 'Data Cleaning', level: 65, category: 'Data Science and Systems Architecture' },
     { name: 'SQL', level: 85, category: 'Data Science and Systems Architecture' },

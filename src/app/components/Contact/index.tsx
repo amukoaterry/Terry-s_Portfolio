@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { FaBehance, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 import emailjs from 'emailjs-com'
 
 export default function Contact() {
@@ -11,7 +12,7 @@ export default function Contact() {
   })
   const [status, setStatus] = useState('')
 
-  const handleChange = (e: { target: { name: string; value: string; } }) => {
+  const handleChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
@@ -20,9 +21,9 @@ export default function Contact() {
     e.preventDefault()
     setStatus('Sending...')
 
-    const serviceId = 'service_h1ryqzr'
-    const templateId = 'template_5b6bszs'
-    const userId = 'qyeyUsLic051iIHcK'
+    const serviceId = 'sservice_wht9m4f'
+    const templateId = 'template_fmnhbpc'
+    const userId = 'EheJ--UAHSBZ1x3bC'
 
     const templateParams = {
       name: formData.name,
@@ -61,10 +62,24 @@ export default function Contact() {
                 <PhoneIcon className="h-6 w-6 text-blue-500 mr-2" />
                 <p className="dark:text-gray-300">+254 748375701</p>
               </div>
-              
-              <div className="flex items-center">
+              <div className="flex items-center mb-4">
                 <MapPinIcon className="h-6 w-6 text-blue-500 mr-2" />
                 <p className="dark:text-gray-300">616, Karen. Korongo Road, Nairobi, Kenya</p>
+              </div>
+
+              <div className="flex space-x-4 mt-4">
+                <a href="https://www.behance.net/terryamukoa" target="_blank" rel="noopener noreferrer">
+                  <FaBehance className="h-6 w-6 text-blue-500 hover:text-blue-700" />
+                </a>
+                <a href="https://www.linkedin.com/in/terry-amukoa-703b312b3/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="h-6 w-6 text-blue-500 hover:text-blue-700" />
+                </a>
+                <a href="https://x.com/TerryAmukoa" target="_blank" rel="noopener noreferrer">
+                  <FaTwitter className="h-6 w-6 text-blue-500 hover:text-blue-700" />
+                </a>
+                <a href="https://github.com/amukoaterry?tab=repositories" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="h-6 w-6 text-blue-500 hover:text-blue-700" />
+                </a>
               </div>
             </motion.div>
           </div>
