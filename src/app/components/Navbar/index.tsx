@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 
 interface NavbarProps {
   theme: string;
@@ -119,11 +118,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
               onClick={toggleTheme}
               className="p-2 rounded-full bg-transparent"
             >
-              {theme === 'dark' ? (
-                <SunIcon className="h-5 w-5 text-yellow-500" />
-              ) : (
-                <MoonIcon className="h-5 w-5 text-gray-700" />
-              )}
+              
             </button>
           </div>
         </div>
