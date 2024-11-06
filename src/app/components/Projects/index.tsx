@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
     
     { id: '1', title: 'Universal Clock', description: 'This is a universal clock project that updates automatically using real-time data, making it easy for users to keep track of different time zones. I used *World Time API* to fetch and display the current time for a selected city.', image: '/images/BackGround.png', demo: <a href='https://uni-clock.vercel.app/' className="text-blue-600 underline">Demo</a>, subject: 'Frontend' },
     { id: '2', title: 'En-Wallet', description: 'A Kotlin-based Android project meant to demonstrate an income and expense tracker designed for modern early-career professionals.', image: '/images/EnWallet.png', demo: <a href='https://appetize.io/app/b_z4yrj2nr32mk563tvzwsodtgma' className="text-blue-600 underline">Demo</a>, subject: 'Frontend' },
-    { id: '3', title: 'BMI Calculator', description: 'This is a project created to help users easily determine your Body Mass Index (BMI) by using your weight and height.It classifies you into categories such as underweight, normal weight, overweight, or obese.', image: '/images/BMI Calculator.png', demo: <a href='https://bmi-calculator-pearl-alpha.vercel.app/' className="text-blue-600 underline">Demo</a>, subject: 'Frontend' },
+    { id: '3', title: 'BMI Calculator', description: 'This is a project created to help users easily determine their Body Mass Index (BMI) by using their weight and height.It classifies one into categories such as underweight, normal weight, overweight, or obese.', image: '/images/BMI Calculator.png', demo: <a href='https://bmi-calculator-pearl-alpha.vercel.app/' className="text-blue-600 underline">Demo</a>, subject: 'Frontend' },
 
   
     // Design Projects
