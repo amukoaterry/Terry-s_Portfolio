@@ -1,45 +1,82 @@
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+// "use client";
+// import React, { useEffect, useState } from 'react';
+// import Image from 'next/image';
 
-export default function Home() {
-  const [text, setText] = useState('')
-  const fullText = "I'm a passionate software developer creating amazing web experiences"
+// const LandingPage: React.FC = () => {
 
-  useEffect(() => {
-    let i = 0
-    const typingEffect = setInterval(() => {
-      if (i < fullText.length) {
-        setText(fullText.slice(0, i + 1))
-        i++
-      } else {
-        clearInterval(typingEffect)
-      }
-    }, 100)
+//   return (
+// <section className="flex flex-col md:flex-row items-center justify-center p-8 md:p-20 gap-8 md:gap-[20%] bg-[#FFFFF] min-h-screen">
+//   <div className="text-center md:text-left">
+//     <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
+//       Hello,<br /> I am Terry Mitchell.<br />
+//     </h1>
+//     <p className="text-lg text-black md:max-w-md mb-4">
+//       I specialize in creating visually appealing and user-friendly web applications using modern technologies.
+//       Let&apos;s work together to bring your ideas to life!
+//     </p>
+//     <div className="mt-4">
+//       <a href="#contact" className="border  bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+//         Get in Touch
+//       </a>
+//     </div>
+//   </div>
+//    <div className="mb-8 md:mb-0">
+//       <Image
+//         src="/images/tee.jpg"
+//         alt="Terry"
+//         width={400}
+//         height={400}
+//         className="w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full"
+//       />
+//     </div>
+// </section>
 
-    return () => clearInterval(typingEffect)
-  }, [])
+//   );
+// };
 
+// export default LandingPage;
+
+
+
+
+
+
+
+"use client";
+import React from 'react';
+import Image from 'next/image';
+
+const LandingPage: React.FC = () => {
   return (
-    <section id="home" className="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
-      <div className="text-center text-white">
-        <motion.h1 
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl font-bold mb-4"
-        >
-          Welcome to My Portfolio
-        </motion.h1>
-        <p className="text-xl mb-8 h-8">{text}</p>
-        <motion.a 
-          href="#contact"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white text-blue-600 py-2 px-6 rounded-full font-bold hover:bg-blue-100 transition duration-300"
-        >
-          Get in Touch
-        </motion.a>
+    <section className="flex flex-col md:flex-row items-center justify-center p-8 md:p-20 gap-8 md:gap-[15%] bg-gray-100 min-h-screen text-gray-800">
+      <div className="text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Hello,<br /> I am Terry Mitchell.<br />
+        </h1>
+        <p className="text-lg md:max-w-md mb-6 text-gray-700">
+          I specialize in creating visually appealing and user-friendly web applications using modern technologies.
+          Let&apos;s work together to bring your ideas to life!
+        </p>
+        <div className="mt-6">
+          <a
+            href="#contact"
+            className="inline-block bg-blue-950 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+      <div>
+        <Image
+          src="/images/tee.jpg"
+          alt="Daisy"
+          width={400}
+          height={400}
+          className="w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border-2 border-gray-300 shadow-md"
+        />
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default LandingPage;

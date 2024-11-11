@@ -9,6 +9,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +30,32 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme); // Save theme in localStorage
+    localStorage.setItem('theme', newTheme); 
   };
+
+  // Detect which section is currently in view
+  useEffect(() => {
+    const handleActiveSection = () => {
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      let currentSection = "";
+      
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const elementTop = element.offsetTop;
+          const elementHeight = element.offsetHeight;
+          
+          if (window.scrollY >= elementTop - 50 && window.scrollY < elementTop + elementHeight - 50) {
+            currentSection = section;
+          }
+        }
+      });
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', handleActiveSection);
+    return () => window.removeEventListener('scroll', handleActiveSection);
+  }, []);
 
   return (
     <nav
@@ -40,8 +65,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
-            Mitchell
+          <h2 className="text-4xl font-bold text-black bg-clip-text font-signature">
+            Terry Mitchell
           </h2>
 
           <button
@@ -81,44 +106,63 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
           >
             <Link
               href="#home"
-              className="text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-4 py-2"
-              onClick={() => setIsMenuOpen(false)} // Close menu on click
+              className={`px-4 py-2 text-gray-900 dark:text-gray-300 dark:hover:text-white ${
+                activeSection === 'home'
+                  ? 'text-black font-bold underline'
+                  : 'hover:text-black dark:hover:text-black'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="#about"
-              className="text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-4 py-2"
+              className={`px-4 py-2 text-gray-900 dark:text-gray-300 dark:hover:text-white ${
+                activeSection === 'about'
+                  ? 'text-black font-bold underline'
+                  : 'hover:text-black dark:hover:text-black'
+              }`}
               onClick={() => setIsMenuOpen(false)} 
             >
               About
             </Link>
             <Link
               href="#skills"
-              className="text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-4 py-2"
+              className={`px-4 py-2 text-gray-900 dark:text-gray-300 dark:hover:text-white ${
+                activeSection === 'skills'
+                  ? 'text-black font-bold underline'
+                  : 'hover:text-black dark:hover:text-black'
+              }`}
               onClick={() => setIsMenuOpen(false)} 
             >
               Skills
             </Link>
             <Link
               href="#projects"
-              className="text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-4 py-2"
+              className={`px-4 py-2 text-gray-900 dark:text-gray-300 dark:hover:text-white ${
+                activeSection === 'projects'
+                  ? 'text-black font-bold underline'
+                  : 'hover:text-black dark:hover:text-black'
+              }`}
               onClick={() => setIsMenuOpen(false)} 
             >
               Projects
             </Link>
             <Link
               href="#contact"
-              className="text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-4 py-2"
+              className={`px-4 py-2 text-gray-900 dark:text-gray-300 dark:hover:text-white ${
+                activeSection === 'contact'
+                  ? 'text-black font-bold underline'
+                  : 'hover:text-black dark:hover:text-black'
+              }`}
               onClick={() => setIsMenuOpen(false)} 
             >
-              Contact
+              Contacts
             </Link>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-transparent"
             >
-              
             </button>
           </div>
         </div>

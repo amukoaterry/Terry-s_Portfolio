@@ -12,8 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        signature: ['Dancing Script', 'cursive'], // Adding custom signature font
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
