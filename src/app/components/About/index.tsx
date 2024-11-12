@@ -33,7 +33,7 @@ export default function About() {
               that not only address real-world challenges but also enhance user experiences and drive business success.
             </p>
             <a
-              href="/images/Amukoa Terry Mitchell Resume.pdf" 
+              href="/images/Terry Mitchell-CV.pdf" 
               download
               className="inline-block mt-4 px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded transition duration-300"
             >

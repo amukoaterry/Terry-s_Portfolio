@@ -21,7 +21,7 @@ export default function Contact() {
     e.preventDefault()
     setStatus('Sending...')
 
-    const serviceId = 'sservice_wht9m4f'
+    const serviceId = 'service_wht9m4f'
     const templateId = 'template_fmnhbpc'
     const userId = 'EheJ--UAHSBZ1x3bC'
 
