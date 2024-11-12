@@ -1,9 +1,8 @@
 
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaJsSquare, FaReact, FaPython, FaFigma, FaJira} from 'react-icons/fa';
-import { SiNextdotjs, SiDjango, SiKotlin, SiTableau, SiSqlite, SiInvision, SiCircleci} from 'react-icons/si';
+import { FaJsSquare, FaReact, FaPython, FaFigma, FaJira } from 'react-icons/fa';
+import { SiNextdotjs, SiDjango, SiKotlin, SiTableau, SiSqlite, SiInvision, SiCircleci } from 'react-icons/si';
 
 interface Skill {
   name: string;
@@ -47,7 +46,7 @@ const Skills: React.FC = () => {
               transition={{ duration: 0.4 }}
             >
               <h3 className="text-xl font-semibold text-blue-500 mb-6 text-center">{category}</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center">
+              <div className="grid grid-cols-2 gap-6 justify-items-center"> {/* Changed grid-cols */}
                 {skills.map((skill) => (
                   <motion.div
                     key={skill.name}
