@@ -32,13 +32,13 @@ export default function About() {
               My expertise spans software engineering—both frontend and backend development—UX research, product management, and UI/UX design. I thrive on creating solutions
               that not only address real-world challenges but also enhance user experiences and drive business success.
             </p>
-            <a
+            {/* <a
               href="/images/Terry Mitchell-CV.pdf" 
               download
               className="inline-block mt-4 px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded transition duration-300"
             >
               Download CV
-            </a>
+            </a> */}
           </motion.div>
         </div>
       </div>
